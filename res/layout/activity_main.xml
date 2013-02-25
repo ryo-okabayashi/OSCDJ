@@ -1,0 +1,222 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/fileNums"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/0"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ProgressBar
+        android:id="@+id/fileNumsBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="40px"
+            android:layout_weight="0.5" >
+
+            <TextView
+                android:id="@+id/deck1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/fileNumsBar"
+                android:text="Deck A"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="50px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/filePath1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/deck1"
+                android:text="deckA.filename" />
+
+            <TextView
+                android:id="@+id/remain1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/filePath1"
+                android:text="90% - 3:13"
+                android:textSize="50px" />
+
+            <ToggleButton
+                android:id="@+id/playToggle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/remain1"
+                android:text="ToggleButton" />
+
+            <Button
+                android:id="@+id/next1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/playToggle1"
+                android:layout_toRightOf="@+id/playToggle1"
+                android:text="Next" />
+
+            <Button
+                android:id="@+id/speedDown1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/next1"
+                android:layout_toRightOf="@+id/next1"
+                android:text="&lt;&lt;" />
+
+            <Button
+                android:id="@+id/speedUp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/speedDown1"
+                android:layout_toRightOf="@+id/speedDown1"
+                android:text="&gt;&gt;" />
+
+            <ProgressBar
+                android:id="@+id/playVolume1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/playToggle1"
+                android:max="100"
+                android:width="500px" />
+
+            <SeekBar
+                android:id="@+id/volume1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/playVolume1"
+                android:max="800"
+                android:width="500px" />
+
+            <Button
+                android:id="@+id/volDown1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/volume1"
+                android:text="&lt;" />
+
+            <Button
+                android:id="@+id/volUp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/volDown1"
+                android:layout_toRightOf="@+id/volDown1"
+                android:text="&gt;" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="40px"
+            android:layout_weight="0.5" >
+
+            <TextView
+                android:id="@+id/deck2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/volume1"
+                android:text="Deck B"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="50px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/filePath2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/deck2"
+                android:text="deckB.filename" />
+
+            <TextView
+                android:id="@+id/remain2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/filePath2"
+                android:text="90% - 3:13"
+                android:textSize="50px" />
+
+            <ToggleButton
+                android:id="@+id/playToggle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/remain2"
+                android:text="ToggleButton" />
+
+            <Button
+                android:id="@+id/next2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/playToggle2"
+                android:layout_toRightOf="@+id/playToggle2"
+                android:text="Next" />
+            <Button
+                android:id="@+id/speedDown2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/next2"
+                android:layout_toRightOf="@+id/next2"
+                android:text="&lt;&lt;" />
+
+            <Button
+                android:id="@+id/speedUp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/speedDown2"
+                android:layout_toRightOf="@+id/speedDown2"
+                android:text="&gt;&gt;" />
+
+            
+            <ProgressBar
+                android:id="@+id/playVolume2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/playToggle2" />
+
+            <SeekBar
+                android:id="@+id/volume2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/playVolume2"
+                android:max="800" />
+            <Button
+                android:id="@+id/volDown2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/volume2"
+                android:text="&lt;" />
+
+            <Button
+                android:id="@+id/volUp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/volDown2"
+                android:layout_toRightOf="@+id/volDown2"
+                android:text="&gt;" />
+            </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
