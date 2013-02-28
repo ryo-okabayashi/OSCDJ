@@ -3,18 +3,31 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/fileNums"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0/0"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_height="wrap_content" >
 
-    <ProgressBar
-        android:id="@+id/fileNumsBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/fileNums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/0"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="20px"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/ip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/connectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connect" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -84,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/speedDown1"
                 android:layout_toRightOf="@+id/speedDown1"
-                android:text="&gt;&gt;" />
+                android:text=">>" />
 
             <ProgressBar
                 android:id="@+id/playVolume1"
@@ -118,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/volDown1"
                 android:layout_toRightOf="@+id/volDown1"
-                android:text="&gt;" />
+                android:text=">" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -170,6 +183,7 @@
                 android:layout_alignTop="@+id/playToggle2"
                 android:layout_toRightOf="@+id/playToggle2"
                 android:text="Next" />
+
             <Button
                 android:id="@+id/speedDown2"
                 android:layout_width="wrap_content"
@@ -184,9 +198,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/speedDown2"
                 android:layout_toRightOf="@+id/speedDown2"
-                android:text="&gt;&gt;" />
+                android:text=">>" />
 
-            
             <ProgressBar
                 android:id="@+id/playVolume2"
                 style="?android:attr/progressBarStyleHorizontal"
@@ -202,6 +215,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/playVolume2"
                 android:max="800" />
+
             <Button
                 android:id="@+id/volDown2"
                 android:layout_width="wrap_content"
@@ -215,8 +229,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/volDown2"
                 android:layout_toRightOf="@+id/volDown2"
-                android:text="&gt;" />
-            </RelativeLayout>
+                android:text=">" />
+        </RelativeLayout>
     </LinearLayout>
 
 </LinearLayout>

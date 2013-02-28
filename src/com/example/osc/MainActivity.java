@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
@@ -33,16 +34,22 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		try {
-			sender = new OSCPortOut(InetAddress.getByName("192.168.11.3"), 7770);
-		} catch (UnknownHostException e1) {
-			e1.printStackTrace();
-		} catch (SocketException e1) {
-			e1.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
+		Button connectButton = (Button)findViewById(R.id.connectButton);
+		connectButton.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				try {
+					EditText ip = (EditText)findViewById(R.id.ip);
+					sender = new OSCPortOut(InetAddress.getByName(ip.getText().toString()), 7770);
+				} catch (UnknownHostException e1) {
+					e1.printStackTrace();
+				} catch (SocketException e1) {
+					e1.printStackTrace();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		
 		final ToggleButton playToggle1 = (ToggleButton)findViewById(R.id.playToggle1);
 		playToggle1.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
